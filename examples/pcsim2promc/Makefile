@@ -27,15 +27,15 @@ INCLUDE1= -I./inc -I./
 INCLUDE2= -I./src
 INCLUDE3= -I$(PROMC)/include -I$(PROMC)/src
 
-Tasks:     clean pcsim-vm2promc
+Tasks:     clean pcsim2promc
 
-SOURCE_FILES := pcsim-vm2promc.cpp
+SOURCE_FILES := pcsim2promc.cpp
 objects       = $(patsubst %.cpp,%.o,$(SOURCE_FILES))
 
 %.o: %.cpp
 	$(CXX) $(OPT) $(CXXFLAGS) $(INCLUDE1) $(INCLUDE2) $(INCLUDE3) -o $@ -c $<
 
-pcsim-vm2promc: $(objects)
+pcsim2promc: $(objects)
 	$(CXX) $(CXXFLAGS) $^ $(LIBS) -o $@
 clean:
-	        @rm -f *.o *~ pcsim-vm2promc; echo "Clear.." 
+	        @rm -f *.o *~ pcsim2promc; echo "Clear.." 

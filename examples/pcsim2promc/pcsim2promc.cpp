@@ -1,5 +1,5 @@
 // Author: David Blyth
-// pcsim-vm to ProMC converter, based on S. Chekanov's stdhep2promc converter.
+// pcsim to ProMC converter, based on S. Chekanov's stdhep2promc converter.
 
 #include <stdlib.h>
 #include <iostream>
@@ -132,7 +132,7 @@ int main(int argc, char **argv) {
         header.set_x2(0);
         header.set_scalepdf(0);
         header.set_weight(0);
-        header.set_name("pcsim-vm converted file");
+        header.set_name("pcsim converted file");
         header.set_ecm(cmEnergy);
         header.set_s(cmEnergy);
         header.set_cross_section(crossSection);
